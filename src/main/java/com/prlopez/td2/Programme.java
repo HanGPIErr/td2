@@ -6,10 +6,10 @@ import com.prlopez.td2.models.Evaluation;
 
 public class Programme {
 
-    public static void main(String[] args){
 
+    protected static Ecole ecole = new Ecole("4 rue de Mouzon");
 
-
+    public Programme() {
         Ecole ecole = new Ecole("4 rue de Mouzon");
 
         Etudiants toto = new Etudiants("toto");
@@ -25,7 +25,10 @@ public class Programme {
         ecole.getListeEtudiants().add(titi);
 
         System.out.println(ecole.moyenne());
+    }
+    public static void main(String[] args){
 
+    new Programme();
 
     }
 }
