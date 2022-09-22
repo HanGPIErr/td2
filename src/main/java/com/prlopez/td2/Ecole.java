@@ -2,6 +2,7 @@ package com.prlopez.td2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 public class Ecole{
 
@@ -12,7 +13,7 @@ public class Ecole{
         this.adresse = adresse;
     }
 
-    protected ArrayList<Etudiants> listeEtudiants = new ArrayList<Etudiants>();
+    protected ArrayList<Etudiants> listeEtudiants = new ArrayList<>();
 
 
     public void setListeEtudiants(ArrayList<Etudiants> listeEtudiants) {
@@ -23,16 +24,22 @@ public class Ecole{
     public ArrayList<Etudiants> getListeEtudiants(){
         return listeEtudiants;
     }
-    public  float moyenne(){
-
+    public float moyenne() {
 
         float cumul = 0;
+        float count = 0;
 
-        for(Etudiants etudiants : listeEtudiants){
+        for (Etudiants etudiant : listeEtudiants) {
 
-            cumul += etudiants.getNoteGlobale();
+            for (Evaluation evaluation : etudiant.getListeEvaluations()) {
+                cumul += evaluation.getNote();
+                //count ++;
+            }
+
+            count += etudiant.getListeEvaluations().size();
         }
-        return cumul / listeEtudiants.size();
+
+        return cumul / count;
     }
 
 

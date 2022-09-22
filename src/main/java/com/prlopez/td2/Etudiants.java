@@ -1,21 +1,23 @@
 package com.prlopez.td2;
 
+import java.util.ArrayList;
+
 public class Etudiants extends Personne {
 
-    protected int NoteGlobale;
 
+    protected ArrayList<Evaluation>listeEvaluations = new ArrayList<>();
 
-    public Etudiants(String personne, int noteGlobale) {
+    public Etudiants(String personne) {
         super(personne);
-        NoteGlobale = noteGlobale;
+
     }
 
-    public int getNoteGlobale() {
-        return NoteGlobale;
+    public ArrayList<Evaluation> getListeEvaluations() {
+        return listeEvaluations;
     }
 
-    public void setNoteGlobale(int noteGlobale) {
-        NoteGlobale = noteGlobale;
+    public void setListeEvaluations(ArrayList<Evaluation> listeEvaluations) {
+        this.listeEvaluations = listeEvaluations;
     }
 }
 
