@@ -12,6 +12,16 @@ public class Etudiants extends Personne {
 
     }
 
+    public float moyenne(){
+
+        float count = 0;
+
+        for(Evaluation evaluation : listeEvaluations) {
+            count += evaluation.getNote();
+        }
+        return count / listeEvaluations.size();
+    }
+
     public ArrayList<Evaluation> getListeEvaluations() {
         return listeEvaluations;
     }
