@@ -1,4 +1,4 @@
-package com.prlopez.td2;
+package com.prlopez.td2.models;
 
 public class Personne {
 

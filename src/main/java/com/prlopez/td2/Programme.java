@@ -1,8 +1,8 @@
-import com.prlopez.td2.Ecole;
-import com.prlopez.td2.Etudiants;
-import com.prlopez.td2.Evaluation;
+package com.prlopez.td2;
 
-import java.util.ArrayList;
+import com.prlopez.td2.models.Ecole;
+import com.prlopez.td2.models.Etudiants;
+import com.prlopez.td2.models.Evaluation;
 
 public class Programme {
 

@@ -1,8 +1,6 @@
-package com.prlopez.td2;
+package com.prlopez.td2.models;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.stream.Collectors;
 
 public class Ecole{
 
