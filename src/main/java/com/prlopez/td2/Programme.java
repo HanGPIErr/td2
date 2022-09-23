@@ -10,25 +10,26 @@ public class Programme {
     protected static Ecole ecole = new Ecole("4 rue de Mouzon");
 
     public Programme() {
-        Ecole ecole = new Ecole("4 rue de Mouzon");
 
-        Etudiants toto = new Etudiants("toto");
-        Etudiants titi = new Etudiants("titi");
 
-        toto.getListeEvaluations().add(new Evaluation(20, "maths"));
-        toto.getListeEvaluations().add(new Evaluation(8,"histoire"));
+        Etudiants john = new Etudiants("John Doe", 22);
 
-        titi.getListeEvaluations().add(new Evaluation(17,"anglais"));
-        titi.getListeEvaluations().add(new Evaluation(5,"JAVA"));
+        System.out.println(john.isMajeur());
 
-        ecole.getListeEtudiants().add(toto);
-        ecole.getListeEtudiants().add(titi);
-
-        System.out.println(ecole.moyenne());
+//        Ecole ecole = new Ecole("4 rue de Mouzon");
+//
+//        Etudiants toto = new Etudiants("toto", 15);
+//        Etudiants titi = new Etudiants("titi", 16);
+//
+//        ecole.ajoutEtudiants(toto,titi);
+//
+//
+//        System.out.println(ecole.moyenne());
     }
-    public static void main(String[] args){
 
-    new Programme();
+    public static void main(String[] args) {
+
+        new Programme();
 
     }
 }
